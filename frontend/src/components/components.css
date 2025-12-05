@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*componentes de layout usados em multiplas paginas*/
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    background-color: #F1F2F7;
+    height: 20px;
+}
+
+.botao-menu {
+    text-decoration: none;
+    font-family: 'Inter';
+}
+
+.botao-menu:hover {
+    background-color: #cdcdcd;
+    color: #0871B4;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    background-color: #0871B4;
+    height: 65px;
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+}
+
+.botao-cadastro {
+    display: flex;
+    align-items: center;
+    background-color: #0871B4;
+    color: #fff;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    width: 179px;
+    text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F2F7;
+    height: auto;
+    width: 400px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.modal-titulo {
+    font-size: 20px;
+    font-family: 'Inter';
+}
+
+.modal-button {
+    background-color: #0871B4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.btn-topo {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: end;
+}
+
+.btn-fechar-modal {
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: rgb(255, 128, 128);
+    border-radius: 5px;
+}
+
+/*componentes da pagina de aeronaves*/
+
+.card-aeronaves {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.card-aeronaves-icone {
+    width: 45px;
+    height: 45px;
+}
+
+.card-aeronaves-topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-aeronaves-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.lista li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-family: 'Inter';
+    font-size: 23px;
+}
+
+.aeronave-modelo {
+    font-family: 'Inter';
+    font-size: 35px;
+}
+
+.aeronave-status {
+    display: flex;
+    justify-content: center;
+    background-color: #56D353;
+    color: #fff;
+    border-radius: 5px;
+    width: 150px;
+    font-family: 'Inter';
+    font-size: 23px;
+    padding: 10px;
+}
+
+/* componentes da pagina de peças */
+
+.card-pecas {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.card-pecas-titulo {
+    font-family: 'Inter';
+}
+
+.card-pecas-subtitulo {
+    font-family: 'Inter';
+}
+
+.card-pecas-texto {
+    font-family: 'Inter';
+    font-weight: normal;
+}
+
+.card-pecas-status {
+    font-family: 'Inter';
+    background-color: #56D353;
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+/*componentes da pagina etapa*/
+
+.card-etapa {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.card-etapa-titulo {
+    font-family: 'Inter';
+}
+
+.card-etapa-prazo {
+    font-family: 'Inter';
+}
+
+.card-etapa-status {
+    background-color: #56D353;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Inter';
+    width: 120px;
+    padding: 10px;
+}
+
+/*pagina testes*/
+
+.card-testes {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 370px;
+    margin-top: 20px;
+}
+
+.card-testes-titulo {
+    font-family: 'Inter';
+    font-size: 25px;
+}
+
+.card-testes-texto {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Inter';
+}
+
+.card-testes-status {
+    text-align: center;
+    background-color: #56D353;
+    color: #fff;
+    padding: 10px;
+    width: 140px;
+    font-family: 'Inter';
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+/*pagina de relatorio*/
+
+.card-relatorio {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card-relatorio-secao {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card-relatorio-titulo {
+    font-family: 'Inter';
+    background-color: #F1F2F7;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+}
+
+.container-card-relatorio {
+    background-color: #F1F2F7;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.card-relatorio-texto {
+    font-family: 'Inter';
+}

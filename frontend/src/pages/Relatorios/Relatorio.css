@@ -1,0 +1,15 @@
+.titulo-relatorio {
+    font-family: 'Inter';
+    font-size: 45px;
+}
+
+.subtitulo-relatorio {
+    font-family: 'Inter';
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.container-relatorios {
+    display: flex;
+    flex-direction: column;
+}

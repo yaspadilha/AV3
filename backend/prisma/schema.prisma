@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Aeronaves {
+  codigo        Int         @id @default(autoincrement())
+  modelo            String
+  tipo_aeronave TipoAeronave
+  capacidade    Int?
+  alcance       Int?
+  id_teste      Int?
+
+  teste         Testes?      @relation(fields: [id_teste], references: [id_teste])
+  pecas         Pecas[]
+  etapas        Etapas[]
+}
+
+model Funcionarios {
+  id_funcionario   Int          @id @default(autoincrement())
+  nome             String?
+  telefone         String?
+  endereco         String?
+  nome_usuario     String?
+  senha            String?
+  nivel_permissao  NivelPermissao
+
+  etapas           Etapas[]
+  testes           Testes[]
+}
+
+model Pecas {
+  id_peca    Int       @id @default(autoincrement())
+  nome       String?
+  tipo       TipoPeca
+  fornecedor String?
+  status     StatusPeca
+  codigo     Int
+
+  aeronave   Aeronaves @relation(fields: [codigo], references: [codigo])
+}
+
+model Etapas {
+  id_etapa      Int          @id @default(autoincrement())
+  nome          String?
+  prazo         DateTime?
+  status        StatusEtapa
+  codigo        Int
+  id_funcionario Int
+
+  aeronave     Aeronaves     @relation(fields: [codigo], references: [codigo])
+  funcionario  Funcionarios  @relation(fields: [id_funcionario], references: [id_funcionario])
+}
+
+model Testes {
+  id_teste       Int          @id @default(autoincrement())
+  tipo           TipoTeste
+  data_realizacao DateTime?
+  resultado      ResultadoTeste
+  id_funcionario Int
+
+  funcionario    Funcionarios @relation(fields: [id_funcionario], references: [id_funcionario])
+  aeronaves      Aeronaves[]
+}
+
+enum TipoAeronave {
+  militar
+  comercial
+}
+
+enum NivelPermissao {
+  administrador
+  engenheiro
+  operador
+}
+
+enum TipoPeca {
+  nacional
+  importada
+}
+
+enum StatusPeca {
+  em_producao      @map("em producao")
+  em_transporte    @map("em transporte")
+  pronta
+}
+
+enum StatusEtapa {
+  pendente
+  em_andamento     @map("em andamento")
+  concluida
+}
+
+enum TipoTeste {
+  hidraulico
+  eletrico
+  aerodinamico
+}
+
+enum ResultadoTeste {
+  aprovado
+  reprovado
+}

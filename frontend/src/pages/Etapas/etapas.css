@@ -1,0 +1,40 @@
+.etapas-aeronave {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1F2F7;
+    border-radius: 15px;
+    width: 400px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.titulo-etapas {
+    font-family: 'Inter';
+    font-size: 45px;
+}
+
+.etapas-titulo {
+    font-family: 'Inter';
+    font-size: 40px;
+}
+
+.etapas-subtitulo {
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.aeronaves {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
