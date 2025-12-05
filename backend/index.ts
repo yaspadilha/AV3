@@ -9,9 +9,7 @@ import { FuncionariosController } from "./src/controllers/funcionariosController
 
 const PORT = 3000;
 const funcionariosCtrl = new FuncionariosController();
-// 2. Use os tipos na definição da função: (req: IncomingMessage, res: ServerResponse)
 const server = http.createServer(async (req: IncomingMessage, res: ServerResponse) => {
-  // Configuração de CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -22,11 +20,9 @@ const server = http.createServer(async (req: IncomingMessage, res: ServerRespons
     return;
   }
 
-  // Métricas
   const startProcessing = performance.now();
   console.log(`[${req.method}] ${req.url} - Recebido`);
 
-  // Roteamento
   if (req.method === "POST" && req.url === "/login") {
     await funcionariosCtrl.login(req, res);
   }
@@ -53,7 +49,6 @@ const server = http.createServer(async (req: IncomingMessage, res: ServerRespons
     res.end(JSON.stringify({ message: "Rota não encontrada" }));
   }
 
-  // Finalização da Métrica
   const endProcessing = performance.now();
   const processingTime = (endProcessing - startProcessing).toFixed(2);
   console.log(`[METRICA] Tempo de processamento: ${processingTime}ms`);
