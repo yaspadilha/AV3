@@ -65,3 +65,13 @@ Desenvolver uma aplicação web completa (Fullstack) para gestão de produção 
 4. Inicie a aplicação:  
    ```bash
    npm run dev
+
+5. Faça login no sistema com um dos usuários padrão
+
+| Email | Senha | Nível de permissão |
+| -------- | ----- | ----------- |
+| administrador@gmail.com | 123 | Administrador |
+| engenheiro@gmail.com | 123 | Engenheiro |
+| operador@gmail.com | 123 | Operador |
+
+**OBS**: Apenas o usuário com o nível de permissão de administrador tem acesso à tabela de gerenciamento de funcionários.
