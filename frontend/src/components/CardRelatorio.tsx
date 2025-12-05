@@ -23,26 +23,26 @@ function CardRelatorio({
 }: CardRelatorioProps) {
     return (
         <div className="container-card-relatorio">
+            <h1>{modelo}</h1>
             <div className='card-relatorio'>
-                <h1>{modelo}</h1>
                 <div className='card-relatorio-detalhes'>
-                    <h2>Detalhes</h2>
-                    <p>{codigo}</p>
-                    <p>{tipo}</p>
-                    <p>{capacidade}</p>
-                    <p>{alcance}</p>
+                    <h2 className='card-relatorio-titulo'>Detalhes</h2>
+                    <p className='card-relatorio-texto'>Código: {codigo}</p>
+                    <p className='card-relatorio-texto'>Tipo: {tipo}</p>
+                    <p className='card-relatorio-texto'>Capacidade: {capacidade}</p>
+                    <p className='card-relatorio-texto'>Alcance: {alcance}</p>
                 </div>
                 <div className='card-relatorio-detalhes'>
-                    <h2>Etapas</h2>
-                    <p>{etapas}</p>
+                    <h2 className='card-relatorio-titulo'>Etapas</h2>
+                    <p className='card-relatorio-texto'>Etapas: {etapas}</p>
                 </div>
                 <div className='card-relatorio-detalhes'>
-                    <h2>Peças</h2>
-                    <p>{pecas}</p>
+                    <h2 className='card-relatorio-titulo'>Peças</h2>
+                    <p className='card-relatorio-texto'>Peças: {pecas}</p>
                 </div>
                 <div className='card-relatorio-detalhes'>
-                    <h2>Testes</h2>
-                    <p>{testes}</p>
+                    <h2 className='card-relatorio-titulo'>Testes</h2>
+                    <p className='card-relatorio-texto'>Testes: {testes}</p>
                 </div>
             </div>
         </div>
